@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherif Pro | شريف برو لتصليح صاج وسكرينات السيارات بالإسكندرية</title>
+    <link rel="icon" type="image/webp" href="images/logo-gold.webp">
+
+    <meta name="description" content="مركز شريف برو (Sherif Pro) المتخصص في تصليح صاج السيارات، علاج الصدأ (البرومة)، والدهان الاحترافي في الإسكندرية. رجع عربيتك فابريكا بأعلى جودة.">
+    <meta name="keywords" content="سمكري سيارات اسكندرية, شريف برو, تصليح صاج, علاج برومة السيارات, دهان فرن, Sherif Pro">
+    
+    <meta property="og:title" content="Sherif Pro | شريف برو">
+    <meta property="og:description" content="رجع عربيتك فابريكا بلمسة برو. متخصصون في علاج الصدأ وتصليح الصاج.">
+    <meta property="og:image" content="images/logo-gold.webp">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoBodyShop",
+      "name": "Sherif Pro - شريف برو",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alexandria",
+        "addressCountry": "EG"
+      },
+      "telephone": "01XXXXXXXXX" 
+    }
+    </script>
+
+    <style>
+        :root { --gold: #D4AF37; --black: #0a0a0a; --white: #ffffff; }
+        body { background-color: var(--black); color: var(--white); font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: linear-gradient(to bottom, #1a1a1a, var(--black)); padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--gold); }
+        h1 { color: var(--gold); font-size: 2.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+        .pro-card { background: #151515; border-radius: 15px; padding: 20px; margin-bottom: 25px; border-left: 5px solid var(--gold); }
+        .gallery { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .gallery img { width: 100%; border-radius: 10px; border: 1px solid #333; transition: 0.3s; }
+        .gallery img:hover { border-color: var(--gold); }
+        .btn-call { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--black); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4); z-index: 999; width: 80%; text-align: center; font-size: 1.2rem; }
+        .footer { text-align: center; padding: 60px 20px 100px; color: #666; font-size: 0.9rem; }
+        /* PWA Styling */
+        @media (display-mode: standalone) { header { padding-top: 60px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SHERIF PRO</h1>
+        <p style="color: #ccc;">الفن في تصليح وصيانة صاج السيارات</p>
+    </header>
+
+    <div class="container">
+        <div class="pro-card">
+            <h2 style="color: var(--gold);">لماذا شريف برو؟</h2>
+            <p>لأننا نعالج "الصدأ" من الجذور ونعيد تشكيل الصاج بأحدث التقنيات لتعود سيارتك كما كانت في المصنع. خبرة، أمانة، وإتقان.</p>
+        </div>
+
+        <h3 style="text-align: center; color: var(--gold);">من أعمالنا (قبل وبعد)</h3>
+        
+        <div class="gallery">
+            <div class="pro-card" style="border-left: none; border-bottom: 3px solid var(--gold);">
+                <p style="font-size: 0.9rem; color: var(--gold);">علاج صدأ وتصليح خبطة بالرفرف:</p>
+                <img src="images/car-repair-1.webp" alt="تصليح صدأ وصاج سيارة شريف برو" loading="lazy">
+            </div>
+            
+            </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Sherif Pro Alexandria. جميع الحقوق محفوظة.</p>
+            <p>تصميم وتطوير: اشرف حسن (Pro SEO Expert)</p>
+        </div>
+    </div>
+
+    <a href="tel:01XXXXXXXXX" class="btn-call">📞 اطلب شريف برو الآن</a>
+
+    <script>
+        // تفعيل الـ PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>
