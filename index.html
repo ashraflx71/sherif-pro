@@ -6,20 +6,20 @@
     <title>Sherif Pro | Back To Zero</title>
     <style>
         /* =========================================
-           1. التنسيق العام والسمة (Theme)
+           1. التنسيق العام والسمة (Black & Gold Theme)
            ========================================= */
         body { margin: 0; background-color: #000; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .section-title { color: #d4af37; text-align: center; margin-bottom: 40px; font-size: 32px; font-weight: bold; text-transform: uppercase; }
 
         /* =========================================
-           2. الهيدر واللوجو في المنتصف
+           2. الهيدر واللوجو الفخم في المنتصف
            ========================================= */
         .main-header { background: #000; border-bottom: 3px solid #d4af37; padding: 15px 0; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        .logo-box img { max-height: 120px; width: auto; display: block; margin: 0 auto; }
+        .logo-box img { max-height: 140px; width: auto; display: block; margin: 0 auto; border-radius: 10px; } /* حجم أكبر للوجو */
 
         /* =========================================
-           3. سلايدر المقارنة (قبل وبعد)
+           3. سلايدر المقارنة (قبل وبعد) - للسيارة الهيونداي
            ========================================= */
         .comparison-section { padding: 60px 0; }
         .comparison-container {
@@ -27,8 +27,10 @@
             margin: 0 auto; overflow: hidden; border: 4px solid #d4af37; border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
+        /* ارفع صورة image_4.png باسم 'after.jpg' وصورة image_0.png باسم 'before.jpg' */
         .img-after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('after.jpg'); background-size: cover; background-position: center; }
         .img-before { position: absolute; top: 0; left: 0; width: 50%; height: 100%; background-image: url('before.jpg'); background-size: cover; background-position: center; border-right: 4px solid #d4af37; z-index: 2; }
+        
         .slider-input { position: absolute; -webkit-appearance: none; appearance: none; width: 100%; height: 100%; background: transparent; outline: none; margin: 0; cursor: ew-resize; z-index: 10; }
         .slider-input::-webkit-slider-thumb { -webkit-appearance: none; width: 50px; height: 500px; background: rgba(212, 175, 55, 0.3); border-left: 2px solid #d4af37; }
         .label { position: absolute; top: 20px; background: rgba(0,0,0,0.8); color: #d4af37; padding: 8px 20px; border-radius: 5px; font-weight: bold; z-index: 5; }
@@ -47,7 +49,7 @@
         .service-card p { color: #ccc; font-size: 16px; line-height: 1.8; }
 
         /* =========================================
-           5. معرض الصور (Gallery) الاحترافي
+           5. معرض الصور (Gallery) من مجموعة صورك
            ========================================= */
         .gallery-section { padding: 80px 0; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -67,12 +69,13 @@
         .cta-btn:hover { background: #fff; transform: scale(1.05); }
 
         /* =========================================
-           7. التجاوب مع الموبايل (Responsive)
+           7. التجاوب مع الموبايل (Responsive Design)
            ========================================= */
         @media (max-width: 768px) {
             .section-title { font-size: 26px; }
+            .main-header { padding: 10px 0; }
+            .logo-box img { max-height: 100px; } /* حجم أصغر للهيدر على الموبايل */
             .comparison-container { height: 350px; }
-            .logo-box img { max-height: 80px; }
             .service-card { padding: 25px; }
             .gallery-item img { height: 200px; }
         }
@@ -101,24 +104,20 @@
         <div class="container">
             <h2 class="section-title">خدماتنا الاحترافية</h2>
             <div class="services-grid">
-                <div class="service-card"><div class="icon">🔨</div><h3>سمكرة فنية</h3><p>إصلاح الصدمات بدقة متناهية، على البارد والحامي، ليعود الصاج لوضعه الأصلي.</p></div>
-                <div class="service-card"><div class="icon">✨</div><h3>تلميع فابريكا</h3><p>تلميع احترافي يزيل الخدوش ويرجع اللمعة الأصلية للعربية كأنها زيرو.</p></div>
-                <div class="service-card"><div class="icon">🪞</div><h3>إصلاح المرايات</h3><p>صيانة كاملة للمرايات الكهرباء والعادية مع توفير قطع الغيار.</p></div>
-                <div class="service-card"><div class="icon">🛡️</div><h3>ترميم الإكصدمات</h3><p>لحام وتجهيز الإكصدمات الفايبر والبلاستيك ودهانها بأعلى جودة.</p></div>
+                <div class="service-card"><div class="icon">🔨</div><h3>سمكرة فنية</h3><p>إصلاح الصدمات، على البارد والحامي، ليعود الصاج لوضعه الأصلي بدون أثر.</p></div>
+                <div class="service-card"><div class="icon">✨</div><h3>لمعة فابريكا</h3><p>تلميع احترافي يزيل الخدوش ويرجع للعربية بريق اليوم الأول "زيرو".</p></div>
+                <div class="service-card"><div class="icon">🛡️</div><h3>ترميم إكصدمات</h3><p>لحام وتجهيز الإكصدمات الفايبر والبلاستيك ودهانها بأعلى جودة.</p></div>
             </div>
         </div>
     </section>
 
     <section class="gallery-section">
         <div class="container">
-            <h2 class="section-title">معرض أعمالنا - لمسة ذهبية</h2>
+            <h2 class="section-title">معرض أعمالنا - إحياء السيارات</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="gallery1.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">سمكرة وتلميع</div></div>
-                <div class="gallery-item"><img src="gallery2.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">إعادة بريق</div></div>
-                <div class="gallery-item"><img src="gallery3.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">إصلاح إكصدمات</div></div>
-                <div class="gallery-item"><img src="gallery4.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">فخامة التفاصيل</div></div>
-                <div class="gallery-item"><img src="gallery5.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">تجديد شامل</div></div>
-                <div class="gallery-item"><img src="gallery6.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">Back To Zero</div></div>
+                <div class="gallery-item"><img src="gallery1.jpg" alt="Suzuki Before"><div class="gallery-overlay">تجهيز كامل</div></div>
+                <div class="gallery-item"><img src="gallery2.jpg" alt="Black Car Work"><div class="gallery-overlay">سمكرة وبوية</div></div>
+                <div class="gallery-item"><img src="gallery3.jpg" alt="Toyota Prado Work"><div class="gallery-overlay">إضاءة فخمة</div></div>
             </div>
         </div>
     </section>
@@ -127,7 +126,7 @@
         <div class="container">
             <h2 class="section-title">رجّع عربيتك فابريكا دلوقتي</h2>
             <p class="cta-text">
-                في مركز <strong>Sherif Pro</strong>، بنهتم بكل تفصيلة في عربيتك. إحنا مش بس بنصلح، إحنا بنعيد إحياء بريقها من جديد بلمسة ذهبية تليق بيك. خدماتنا شاملة وضماننا حقيقي.
+                في مركز <strong>Sherif Pro</strong> في الإسكندرية، بنهتم بكل تفصيلة في عربيتك. إحنا مش بس بنصلح، إحنا بنعيد إحياء بريقها من جديد بلمسة ذهبية تليق بيك. خدماتنا شاملة وضماننا حقيقي.
             </p>
             <a href="https://wa.me/201227302325" class="cta-btn">احجز موعدك على الواتساب</a>
         </div>
