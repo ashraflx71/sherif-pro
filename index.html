@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sherif Pro | شريف برو - Back To Zero</title>
+    <title>Sherif Pro | مركز خدمة الصيانة المتكاملة</title>
     <style>
         :root { --gold: #d4af37; --dark: #000; }
-        body { margin: 0; background-color: var(--dark); color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        body { margin: 0; background-color: var(--dark); color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* الهيدر واللوجو */
+        /* الهيدر واللوجو - صورة شريف وابنه */
         .main-header { background: var(--dark); border-bottom: 3px solid var(--gold); padding: 20px 0; }
-        .logo-box img { max-height: 140px; border-radius: 12px; border: 2px solid var(--gold); }
+        .logo-box img { max-height: 150px; border-radius: 12px; border: 2px solid var(--gold); box-shadow: 0 0 15px var(--gold); }
 
-        /* السلايدر */
+        /* العنوان والخدمات */
+        .info-section { padding: 30px 0; border-bottom: 1px solid #333; }
+        .info-section h1 { color: var(--gold); font-size: 28px; margin-bottom: 10px; }
+        .services-list { font-size: 18px; color: #ccc; margin-bottom: 20px; }
+        .address-box { background: #111; padding: 20px; border-radius: 10px; border: 1px dashed var(--gold); display: inline-block; margin-top: 10px; }
+
+        /* السلايدر - صورة الهيونداي */
         .comp-section { padding: 40px 0; }
         .comp-container {
             position: relative; width: 100%; max-width: 800px; height: 450px;
             margin: 0 auto; overflow: hidden; border: 3px solid var(--gold); border-radius: 15px;
         }
-        /* الصور هنا بأسماء ملفاتك اللي رفعتها */
         .img-after { position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('16971.jpg'); background-size: cover; background-position: center; }
         .img-before { position: absolute; top:0; left:0; width:50%; height:100%; background-image: url('16970.jpg'); background-size: cover; background-position: center; border-right: 3px solid var(--gold); z-index: 2; }
         .slider-input { position: absolute; -webkit-appearance: none; width: 100%; height: 100%; background: transparent; cursor: ew-resize; z-index: 10; margin: 0; outline: none; }
         .slider-input::-webkit-slider-thumb { -webkit-appearance: none; width: 40px; height: 450px; background: rgba(212,175,55,0.2); border-left: 2px solid var(--gold); }
 
         /* الأزرار */
-        .btn-box { margin: 30px 0; }
-        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; }
-        .btn-wa { background: #25D366; color: #fff; }
+        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; font-size: 18px; }
+        .btn-wa { background: #25D366; color: #fff; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
         .btn-fb { background: #1877F2; color: #fff; }
 
-        /* معرض الصور */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 30px; }
+        /* المعرض */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 30px; padding-bottom: 50px; }
         .gallery img { width: 100%; height: 230px; object-fit: cover; border-radius: 10px; border: 1px solid #333; }
         
-        @media (max-width: 768px) { .comp-container { height: 280px; } }
+        @media (max-width: 768px) { .comp-container { height: 280px; } .info-section h1 { font-size: 22px; } }
     </style>
 </head>
 <body>
@@ -47,8 +51,17 @@
     </header>
 
     <div class="container">
+        <section class="info-section">
+            <h1>مركز خدمة الصيانة المتكاملة للسيارات الحديثة</h1>
+            <p class="services-list">سمكرة • دهان سيارات • فن إصلاح إكصدمات • مرايات • فوانيس</p>
+            <div class="address-box">
+                📍 الحرفيين - المرحلة الثالثة - بعد مرور محرم بك<br>
+                مدخل توكيل بيجو ونيسان - قبل الموقف الجديد
+            </div>
+        </section>
+
         <section class="comp-section">
-            <h2 style="color: var(--gold);">خدمة Back To Zero</h2>
+            <h2 style="color: var(--gold);">خدمة Back To Zero - شاهد فرق التحول</h2>
             <div class="comp-container">
                 <div class="img-after"></div>
                 <div id="before-box" class="img-before"></div>
@@ -57,11 +70,11 @@
         </section>
 
         <div class="btn-box">
-            <a href="https://wa.me/201227302325" class="btn btn-wa">واتساب 🟢</a>
-            <a href="https://www.facebook.com/share/18ADr816ik/" class="btn btn-fb">فيسبوك 👍</a>
+            <a href="https://wa.me/201227302325" class="btn btn-wa">احجز موعدك واتساب 🟢</a>
+            <a href="https://www.facebook.com/share/1Az71EC7dD/" class="btn btn-fb">تابعنا على فيسبوك 👍</a>
         </div>
 
-        <h2 style="color: var(--gold);">من أعمالنا</h2>
+        <h2 style="color: var(--gold);">معرض أعمالنا</h2>
         <div class="gallery">
             <img src="16972.jpg">
             <img src="16973.jpg">
