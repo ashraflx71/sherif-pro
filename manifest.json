@@ -1,0 +1,25 @@
+{
+  "name": "Sherif Pro - شريف برو للإسكندرية",
+  "short_name": "Sherif Pro",
+  "description": "خبير سمكرة ودهان السيارات بنظام Back To Zero في الإسكندرية. دقة هندسية وأمانة.",
+  "start_url": "https://www.sherifpro.com/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D4AF37",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "https://www.sherifpro.com/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://www.sherifpro.com/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
