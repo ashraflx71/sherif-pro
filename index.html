@@ -6,7 +6,7 @@
     <title>Sherif Pro | مركز خدمة الصيانة المتكاملة</title>
     <style>
         :root { --gold: #d4af37; --dark: #000; }
-        body { margin: 0; background-color: var(--dark); color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; }
+        body { margin: 0; background-color: var(--dark); color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
         /* الهيدر واللوجو */
@@ -14,12 +14,12 @@
         .logo-box img { max-height: 150px; border-radius: 12px; border: 2px solid var(--gold); box-shadow: 0 0 15px var(--gold); }
 
         /* العنوان والخدمات */
-        .info-section { padding: 30px 0; border-bottom: 1px solid #333; }
-        .info-section h1 { color: var(--gold); font-size: 26px; margin-bottom: 10px; }
-        .services-list { font-size: 18px; color: #ccc; margin-bottom: 20px; }
-        .address-box { background: #111; padding: 20px; border-radius: 10px; border: 1px dashed var(--gold); display: inline-block; line-height: 1.8; }
+        .info-section { padding: 30px 0; }
+        .info-section h1 { color: var(--gold); font-size: 26px; margin: 0 0 10px 0; }
+        .services-text { font-size: 19px; color: #eee; font-weight: bold; margin-bottom: 15px; }
+        .address-box { background: #111; padding: 20px; border-radius: 10px; border: 1px dashed var(--gold); display: inline-block; margin-top: 5px; font-size: 16px; color: #ccc; }
 
-        /* السلايدر - صورة الهيونداي */
+        /* سلايدر قبل وبعد */
         .comp-section { padding: 40px 0; }
         .comp-container {
             position: relative; width: 100%; max-width: 800px; height: 450px;
@@ -32,13 +32,14 @@
 
         /* الأزرار */
         .btn-box { padding: 20px 0; }
-        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; }
-        .btn-wa { background: #25D366; color: #fff; }
+        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; font-size: 18px; }
+        .btn-wa { background: #25D366; color: #fff; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
         .btn-fb { background: #1877F2; color: #fff; }
 
         /* المعرض */
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 30px; padding-bottom: 50px; }
-        .gallery img { width: 100%; height: 230px; object-fit: cover; border-radius: 10px; border: 1px solid #333; }
+        .gallery img { width: 100%; height: 230px; object-fit: cover; border-radius: 10px; border: 1px solid #333; transition: 0.3s; }
+        .gallery img:hover { border-color: var(--gold); transform: scale(1.02); }
         
         @media (max-width: 768px) { .comp-container { height: 280px; } .info-section h1 { font-size: 20px; } }
     </style>
@@ -54,7 +55,7 @@
     <div class="container">
         <section class="info-section">
             <h1>مركز خدمة الصيانة المتكاملة للسيارات الحديثة</h1>
-            <p class="services-list">سمكرة • دهان • إصلاح إكصدمات • مرايات • فوانيس</p>
+            <p class="services-text">سمكرة • دهان • فن إصلاح إكصدمات • مرايات • فوانيس</p>
             <div class="address-box">
                 📍 الحرفيين - المرحلة الثالثة - بعد مرور محرم بك<br>
                 مدخل توكيل بيجو ونيسان - قبل الموقف الجديد
@@ -62,7 +63,7 @@
         </section>
 
         <section class="comp-section">
-            <h2 style="color: var(--gold);">خدمة Back To Zero - قبل وبعد</h2>
+            <h2 style="color: var(--gold);">خدمة Back To Zero - رجّعها زيرو</h2>
             <div class="comp-container">
                 <div class="img-after"></div>
                 <div id="before-box" class="img-before"></div>
@@ -71,11 +72,11 @@
         </section>
 
         <div class="btn-box">
-            <a href="https://wa.me/201227302325" class="btn btn-wa">واتساب 🟢</a>
-            <a href="https://www.facebook.com/share/1Az71EC7dD/" class="btn btn-fb">فيسبوك 👍</a>
+            <a href="https://wa.me/201227302325" class="btn btn-wa">احجز موعدك واتساب 🟢</a>
+            <a href="https://www.facebook.com/share/1Az71EC7dD/" class="btn btn-fb" target="_blank">تابعنا على فيسبوك 👍</a>
         </div>
 
-        <h2 style="color: var(--gold);">معرض الأعمال</h2>
+        <h2 style="color: var(--gold);">من أعمالنا</h2>
         <div class="gallery">
             <img src="16972.jpg">
             <img src="16973.jpg">
@@ -89,7 +90,9 @@
     <script>
         const slider = document.getElementById('range-slider');
         const beforeBox = document.getElementById('before-box');
-        slider.addEventListener('input', (e) => { beforeBox.style.width = e.target.value + '%'; });
+        slider.addEventListener('input', (e) => {
+            beforeBox.style.width = e.target.value + '%';
+        });
     </script>
 </body>
 </html>
