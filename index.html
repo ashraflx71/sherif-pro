@@ -3,101 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sherif Pro | شريف برو - هندسة تجديد السيارات</title>
+    <title>Sherif Pro v2 | شريف برو - صيانة سيارات</title>
     <style>
-        /* الألوان: الأسود، الأبيض، والأزرق العميق */
         :root {
-            --primary-blue: #004aad; 
-            --deep-black: #0d0d0d;
-            --pure-white: #ffffff;
-            --bg-light: #f8f9fa;
+            --blue: #004aad;
+            --black: #0d0d0d;
+            --white: #ffffff;
+            --gray: #f1f1f1;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: var(--pure-white); color: var(--deep-black); line-height: 1.6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+        
+        body { background-color: var(--white); color: var(--black); }
 
+        /* الهيدر الجديد */
         header {
-            background-color: var(--deep-black);
-            color: var(--pure-white);
-            padding: 15px;
+            background-color: var(--black);
+            color: var(--white);
+            padding: 20px;
             text-align: center;
-            border-bottom: 4px solid var(--primary-blue);
+            border-bottom: 5px solid var(--blue);
         }
 
+        /* القسم الرئيسي بالصور الحديثة */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1486006396193-c7a33a401d67?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
-        .hero-img {
-            width: 100%; max-width: 700px; border-radius: 15px;
-            border: 3px solid var(--primary-blue); margin-top: 20px;
-        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
 
-        .services { padding: 50px 20px; background: var(--bg-light); text-align: center; }
-        .services h2 { color: var(--primary-blue); margin-bottom: 30px; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card h3 { padding: 15px; color: var(--primary-blue); }
-        .card p { padding: 0 15px 20px; font-size: 0.9rem; color: #555; }
-
+        /* أزرار التواصل المباشر */
         .cta-btn {
-            display: inline-block; background-color: var(--primary-blue); color: white;
-            padding: 15px 35px; border-radius: 50px; text-decoration: none;
-            font-weight: bold; margin-top: 25px; transition: 0.3s;
+            display: inline-block;
+            background-color: var(--blue);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
         }
-        .cta-btn:hover { background-color: #003a8c; transform: scale(1.05); }
 
-        footer { background: var(--deep-black); color: white; text-align: center; padding: 30px; border-top: 4px solid var(--primary-blue); }
+        /* شبكة الخدمات الفنية */
+        .services { padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 4px solid var(--blue); }
+        .card h3 { padding: 15px; color: var(--blue); text-align: center; }
+        .card p { padding: 0 15px 20px; text-align: center; color: #444; }
+
+        footer { background: var(--black); color: white; text-align: center; padding: 25px; margin-top: 30px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-size: 1.8rem; font-weight: bold;">SHERIF PRO</div>
-    <div style="font-size: 0.9rem; opacity: 0.8;">بإشراف المهندس شريف سالم</div>
+    <h1 style="letter-spacing: 2px;">SHERIF PRO</h1>
+    <p>هندسة صيانة السيارات - م. شريف سالم</p>
 </header>
 
 <section class="hero">
     <h1>تجديد السيارات برؤية هندسية</h1>
-    <p>الاحترافية في صيانة الهياكل والدهان والسمكرة الحديثة</p>
-    <img src="https://images.unsplash.com/photo-1530046339160-ce3e5b0c7a2f?auto=format&fit=crop&w=800&q=80" alt="صيانة سيارات حديثة" class="hero-img">
-    <br>
-    <a href="https://wa.me/201222880016" class="cta-btn">تواصل مع م. شريف الآن</a>
+    <p>سمكرة، دهان، وميكانيكا بأحدث التقنيات العالمية</p>
+    <a href="https://wa.me/201222880016" class="cta-btn">تواصل عبر واتساب الآن</a>
 </section>
 
 <section class="services">
-    <h2>خدماتنا الفنية</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1507702553912-a15641e827c8?auto=format&fit=crop&w=400&q=80" alt="تجديد الشاسيه">
-            <h3>هندسة الهياكل</h3>
-            <p>إصلاح وتجديد شاسيه السيارة بأعلى معايير الأمان والدقة الهندسية.</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&w=400&q=80" alt="سمكرة ودهان">
-            <h3>السمكرة والدهان</h3>
-            <p>إعادة البريق لسيارتك بأفضل خامات الدهان والفرن الحراري الحديث.</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=400&q=80" alt="ميكانيكا">
-            <h3>الميكانيكا والكهرباء</h3>
-            <p>فحص شامل وإصلاح دقيق للمحركات والأنظمة الكهربائية والكمبيوتر.</p>
-        </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?w=500&q=80" alt="سمكرة">
+        <h3>السمكرة والدهان</h3>
+        <p>إعادة السيارة لحالة الفابريكا بأجود أنواع الطلاء والفرن الحراري.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1632733711679-5292d6863f14?w=500&q=80" alt="شاسيه">
+        <h3>هندسة الهياكل</h3>
+        <p>ضبط زوايا وإصلاح الشاسيه المتضرر بأجهزة قياس دقيقة جداً.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=500&q=80" alt="ميكانيكا">
+        <h3>الميكانيكا والكهرباء</h3>
+        <p>فحص كمبيوتر وصيانة شاملة للمحركات والأنظمة الكهربائية.</p>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 جميع الحقوق محفوظة لـ Sherif Pro</p>
-    <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">تم التطوير بواسطة Ashraf Tech</p>
+    <p>© 2026 Sherif Pro | جميع الحقوق محفوظة</p>
+    <p style="font-size: 0.8rem; margin-top: 5px; opacity: 0.5;">تطوير: Ashraf Tech</p>
 </footer>
 
 </body>
