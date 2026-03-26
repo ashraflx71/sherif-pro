@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sherif Pro | شريف برو - مركز سمكرة وتلميع سيارات</title>
+    <title>Sherif Pro | شريف برو - Back To Zero</title>
     <style>
         :root { --gold: #d4af37; --dark: #000; }
         body { margin: 0; background-color: var(--dark); color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; text-align: center; }
         
-        /* الهيدر */
-        .main-header { background: var(--dark); border-bottom: 3px solid var(--gold); padding: 15px 0; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        .logo-box img { max-height: 120px; border-radius: 10px; border: 1px solid var(--gold); }
+        /* الهيدر واللوجو */
+        .main-header { background: var(--dark); border-bottom: 3px solid var(--gold); padding: 20px 0; }
+        .logo-box img { max-height: 140px; border-radius: 12px; border: 2px solid var(--gold); }
 
         /* السلايدر */
-        .comp-section { padding: 40px 0; text-align: center; }
+        .comp-section { padding: 40px 0; }
         .comp-container {
             position: relative; width: 100%; max-width: 800px; height: 450px;
             margin: 0 auto; overflow: hidden; border: 3px solid var(--gold); border-radius: 15px;
         }
-        .img-after { position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('after.jpg'); background-size: cover; background-position: center; }
-        .img-before { position: absolute; top:0; left:0; width:50%; height:100%; background-image: url('before.jpg'); background-size: cover; background-position: center; border-right: 3px solid var(--gold); z-index: 2; }
+        /* الصور هنا بأسماء ملفاتك اللي رفعتها */
+        .img-after { position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('16971.jpg'); background-size: cover; background-position: center; }
+        .img-before { position: absolute; top:0; left:0; width:50%; height:100%; background-image: url('16970.jpg'); background-size: cover; background-position: center; border-right: 3px solid var(--gold); z-index: 2; }
         .slider-input { position: absolute; -webkit-appearance: none; width: 100%; height: 100%; background: transparent; cursor: ew-resize; z-index: 10; margin: 0; outline: none; }
         .slider-input::-webkit-slider-thumb { -webkit-appearance: none; width: 40px; height: 450px; background: rgba(212,175,55,0.2); border-left: 2px solid var(--gold); }
 
-        /* الأزرار الاجتماعية */
-        .social-buttons { text-align: center; padding: 20px 0; }
-        .btn-fb { display: inline-block; padding: 12px 30px; background: #1877F2; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; margin: 10px; transition: 0.3s; }
-        .btn-wa { display: inline-block; padding: 12px 30px; background: #25D366; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; margin: 10px; transition: 0.3s; }
-        .btn-fb:hover, .btn-wa:hover { opacity: 0.8; transform: scale(1.05); }
+        /* الأزرار */
+        .btn-box { margin: 30px 0; }
+        .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; }
+        .btn-wa { background: #25D366; color: #fff; }
+        .btn-fb { background: #1877F2; color: #fff; }
 
         /* معرض الصور */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; padding: 20px 0; }
-        .gallery-item img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; border: 1px solid #333; }
-
-        .footer { text-align: center; padding: 40px 0; border-top: 1px solid #333; color: var(--gold); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 30px; }
+        .gallery img { width: 100%; height: 230px; object-fit: cover; border-radius: 10px; border: 1px solid #333; }
+        
+        @media (max-width: 768px) { .comp-container { height: 280px; } }
     </style>
 </head>
 <body>
 
     <header class="main-header">
         <div class="logo-box">
-            <img src="logo.jpg" alt="Sherif Pro">
+            <img src="16966.jpg" alt="Sherif Pro">
         </div>
     </header>
 
     <div class="container">
         <section class="comp-section">
-            <h2 style="color: var(--gold);">Back To Zero - رجّعها زيرو</h2>
+            <h2 style="color: var(--gold);">خدمة Back To Zero</h2>
             <div class="comp-container">
                 <div class="img-after"></div>
                 <div id="before-box" class="img-before"></div>
@@ -55,31 +56,26 @@
             </div>
         </section>
 
-        <div class="social-buttons">
-            <a href="https://www.facebook.com/share/18ADr816ik/" target="_blank" class="btn-fb">تابعنا على فيسبوك 👍</a>
-            <a href="https://wa.me/201227302325" class="btn-wa">تواصل واتساب 🟢</a>
+        <div class="btn-box">
+            <a href="https://wa.me/201227302325" class="btn btn-wa">واتساب 🟢</a>
+            <a href="https://www.facebook.com/share/18ADr816ik/" class="btn btn-fb">فيسبوك 👍</a>
         </div>
 
-        <h2 style="text-align: center; color: var(--gold);">أحدث أعمالنا</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="g1.jpg"></div>
-            <div class="gallery-item"><img src="g2.jpg"></div>
-            <div class="gallery-item"><img src="g3.jpg"></div>
-            <div class="gallery-item"><img src="g4.jpg"></div>
+        <h2 style="color: var(--gold);">من أعمالنا</h2>
+        <div class="gallery">
+            <img src="16972.jpg">
+            <img src="16973.jpg">
+            <img src="16974.jpg">
+            <img src="16969.jpg">
+            <img src="16968.jpg">
+            <img src="16967.jpg">
         </div>
     </div>
-
-    <footer class="footer">
-        <p>مركز شريف برو - الإسكندرية - الهانوفيل</p>
-        <p>جميع الحقوق محفوظة © 2026</p>
-    </footer>
 
     <script>
         const slider = document.getElementById('range-slider');
         const beforeBox = document.getElementById('before-box');
-        slider.addEventListener('input', (e) => {
-            beforeBox.style.width = e.target.value + '%';
-        });
+        slider.addEventListener('input', (e) => { beforeBox.style.width = e.target.value + '%'; });
     </script>
 </body>
 </html>
