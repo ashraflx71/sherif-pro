@@ -5,57 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sherif Pro | Back To Zero</title>
     <style>
-        body { margin: 0; background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; }
-        
-        /* الهيدر واللوجو */
-        .main-header { 
-            background: #000; 
-            border-bottom: 3px solid #d4af37; 
-            padding: 15px 0; 
-            text-align: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
+        /* =========================================
+           1. التنسيق العام والسمة (Theme)
+           ========================================= */
+        body { margin: 0; background-color: #000; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section-title { color: #d4af37; text-align: center; margin-bottom: 40px; font-size: 32px; font-weight: bold; text-transform: uppercase; }
+
+        /* =========================================
+           2. الهيدر واللوجو في المنتصف
+           ========================================= */
+        .main-header { background: #000; border-bottom: 3px solid #d4af37; padding: 15px 0; position: sticky; top: 0; z-index: 1000; text-align: center; }
         .logo-box img { max-height: 120px; width: auto; display: block; margin: 0 auto; }
 
-        /* السلايدر */
-        .comparison-section { padding: 40px 0; text-align: center; }
-        .section-title { color: #d4af37; margin-bottom: 25px; font-size: 26px; font-weight: bold; }
-        
+        /* =========================================
+           3. سلايدر المقارنة (قبل وبعد)
+           ========================================= */
+        .comparison-section { padding: 60px 0; }
         .comparison-container {
             position: relative; width: 95%; max-width: 900px; height: 500px;
             margin: 0 auto; overflow: hidden; border: 4px solid #d4af37; border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
-
-        /* استخدام أسماء الملفات مباشرة كما هي في GitHub */
-        .img-after { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('after.jpg'); background-size: cover; background-position: center; 
-        }
-        .img-before { 
-            position: absolute; top: 0; left: 0; width: 50%; height: 100%;
-            background-image: url('before.jpg'); background-size: cover; background-position: center;
-            border-right: 4px solid #d4af37; z-index: 2;
-        }
-
-        .slider-input {
-            position: absolute; -webkit-appearance: none; appearance: none;
-            width: 100%; height: 100%; background: transparent; outline: none;
-            margin: 0; cursor: ew-resize; z-index: 10;
-        }
-
-        .slider-input::-webkit-slider-thumb {
-            -webkit-appearance: none; width: 50px; height: 500px; /* مقبض طويل يسهل سحبه */
-            background: rgba(212, 175, 55, 0.3); border-left: 2px solid #d4af37;
-        }
-
+        .img-after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('after.jpg'); background-size: cover; background-position: center; }
+        .img-before { position: absolute; top: 0; left: 0; width: 50%; height: 100%; background-image: url('before.jpg'); background-size: cover; background-position: center; border-right: 4px solid #d4af37; z-index: 2; }
+        .slider-input { position: absolute; -webkit-appearance: none; appearance: none; width: 100%; height: 100%; background: transparent; outline: none; margin: 0; cursor: ew-resize; z-index: 10; }
+        .slider-input::-webkit-slider-thumb { -webkit-appearance: none; width: 50px; height: 500px; background: rgba(212, 175, 55, 0.3); border-left: 2px solid #d4af37; }
         .label { position: absolute; top: 20px; background: rgba(0,0,0,0.8); color: #d4af37; padding: 8px 20px; border-radius: 5px; font-weight: bold; z-index: 5; }
         .label-before { left: 20px; }
         .label-after { right: 20px; }
 
-        @media (max-width: 768px) { .comparison-container { height: 350px; } .logo-box img { max-height: 80px; } }
+        /* =========================================
+           4. قسم الخدمات الاحترافية
+           ========================================= */
+        .services-section { padding: 60px 0; background: #111; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: #1a1a1a; padding: 40px; border: 1px solid #333; border-radius: 15px; text-align: center; transition: 0.4s ease-in-out; }
+        .service-card:hover { border-color: #d4af37; transform: translateY(-10px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); }
+        .service-card .icon { font-size: 50px; margin-bottom: 20px; color: #d4af37; }
+        .service-card h3 { color: #d4af37; margin-bottom: 15px; font-size: 22px; }
+        .service-card p { color: #ccc; font-size: 16px; line-height: 1.8; }
+
+        /* =========================================
+           5. معرض الصور (Gallery) الاحترافي
+           ========================================= */
+        .gallery-section { padding: 80px 0; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; border: 2px solid #333; cursor: pointer; transition: 0.3s; }
+        .gallery-item:hover { border-color: #d4af37; transform: scale(1.02); }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #d4af37; padding: 15px; text-align: center; font-weight: bold; opacity: 0; transition: 0.3s; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* =========================================
+           6. النص التسويقي وزر الاتصال
+           ========================================= */
+        .cta-section { padding: 60px 0; background: #111; text-align: center; }
+        .cta-text { max-width: 800px; margin: 0 auto 30px; color: #ccc; font-size: 19px; line-height: 1.9; }
+        .cta-btn { display: inline-block; padding: 15px 40px; background: #d4af37; color: #000; text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 18px; transition: 0.3s; }
+        .cta-btn:hover { background: #fff; transform: scale(1.05); }
+
+        /* =========================================
+           7. التجاوب مع الموبايل (Responsive)
+           ========================================= */
+        @media (max-width: 768px) {
+            .section-title { font-size: 26px; }
+            .comparison-container { height: 350px; }
+            .logo-box img { max-height: 80px; }
+            .service-card { padding: 25px; }
+            .gallery-item img { height: 200px; }
+        }
     </style>
 </head>
 <body>
@@ -67,38 +87,51 @@
     </header>
 
     <section class="comparison-section">
-        <h2 class="section-title">إعادة إحياء بريق السيارات</h2>
-        <div class="comparison-container">
-            <div class="img-after"><span class="label label-after">بعد</span></div>
-            <div id="before-box" class="img-before"><span class="label label-before">قبل</span></div>
-            <input type="range" min="0" max="100" value="50" class="slider-input" id="range-slider">
+        <div class="container">
+            <h2 class="section-title">شاهد سحر التحول - Back To Zero</h2>
+            <div class="comparison-container">
+                <div class="img-after"><span class="label label-after">بعد</span></div>
+                <div id="before-box" class="img-before"><span class="label label-before">قبل</span></div>
+                <input type="range" min="0" max="100" value="50" class="slider-input" id="range-slider">
+            </div>
         </div>
-    </section><section class="services-section">
-    <h2 class="section-title">خدماتنا الاحترافية</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="icon">🔨</div>
-            <h3>سمكرة على البارد والحامي</h3>
-            <p>إصلاح الصدمات بأحدث المعدات لترجع الصاج لوضعه الأصلي بدون أثر.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon">✨</div>
-            <h3>لمعة فابريكا (Polishing)</h3>
-            <p>تلميع احترافي يزيل الخدوش ويرجع للعربية بريق اليوم الأول "زيرو".</p>
-        </div>
-        <div class="service-card">
-            <div class="icon">🪞</div>
-            <h3>إصلاح وتجديد المرايات</h3>
-            <p>صيانة كاملة للمرايات الكهرباء والعادية مع توفير قطع الغيار الأصلية.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon">🛡️</div>
-            <h3>ترميم وإصلاح الإكصدمات</h3>
-            <p>لحام وتجهيز الإكصدمات الفايبر والبلاستيك ودهانها بأعلى جودة.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">خدماتنا الاحترافية</h2>
+            <div class="services-grid">
+                <div class="service-card"><div class="icon">🔨</div><h3>سمكرة فنية</h3><p>إصلاح الصدمات بدقة متناهية، على البارد والحامي، ليعود الصاج لوضعه الأصلي.</p></div>
+                <div class="service-card"><div class="icon">✨</div><h3>تلميع فابريكا</h3><p>تلميع احترافي يزيل الخدوش ويرجع اللمعة الأصلية للعربية كأنها زيرو.</p></div>
+                <div class="service-card"><div class="icon">🪞</div><h3>إصلاح المرايات</h3><p>صيانة كاملة للمرايات الكهرباء والعادية مع توفير قطع الغيار.</p></div>
+                <div class="service-card"><div class="icon">🛡️</div><h3>ترميم الإكصدمات</h3><p>لحام وتجهيز الإكصدمات الفايبر والبلاستيك ودهانها بأعلى جودة.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">معرض أعمالنا - لمسة ذهبية</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="gallery1.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">سمكرة وتلميع</div></div>
+                <div class="gallery-item"><img src="gallery2.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">إعادة بريق</div></div>
+                <div class="gallery-item"><img src="gallery3.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">إصلاح إكصدمات</div></div>
+                <div class="gallery-item"><img src="gallery4.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">فخامة التفاصيل</div></div>
+                <div class="gallery-item"><img src="gallery5.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">تجديد شامل</div></div>
+                <div class="gallery-item"><img src="gallery6.jpg" alt="Sherif Pro Work"><div class="gallery-overlay">Back To Zero</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">رجّع عربيتك فابريكا دلوقتي</h2>
+            <p class="cta-text">
+                في مركز <strong>Sherif Pro</strong>، بنهتم بكل تفصيلة في عربيتك. إحنا مش بس بنصلح، إحنا بنعيد إحياء بريقها من جديد بلمسة ذهبية تليق بيك. خدماتنا شاملة وضماننا حقيقي.
+            </p>
+            <a href="https://wa.me/201227302325" class="cta-btn">احجز موعدك على الواتساب</a>
+        </div>
+    </section>
 
     <script>
         const slider = document.getElementById('range-slider');
