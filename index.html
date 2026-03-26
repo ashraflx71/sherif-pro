@@ -6,21 +6,21 @@
     <title>Sherif Pro | شريف برو - هندسة السيارات</title>
     <style>
         :root {
-            --blue: #004aad;
-            --black: #0d0d0d;
-            --white: #ffffff;
-            --gray: #f4f4f4;
+            --primary-blue: #004aad; /* أزرق هندسي */
+            --deep-black: #0d0d0d;  /* أسود فخم */
+            --pure-white: #ffffff;
+            --soft-gray: #f9f9f9;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-        body { background-color: var(--white); color: var(--black); line-height: 1.6; }
+        body { background-color: var(--pure-white); color: var(--deep-black); line-height: 1.6; }
 
         header {
-            background-color: var(--black);
-            color: var(--white);
+            background-color: var(--deep-black);
+            color: var(--pure-white);
             padding: 20px;
             text-align: center;
-            border-bottom: 5px solid var(--blue);
+            border-bottom: 5px solid var(--primary-blue);
         }
 
         .hero {
@@ -29,78 +29,90 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
         }
 
-        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
         
-        .cta-btn {
+        .whatsapp-btn {
             display: inline-block;
-            background-color: var(--blue);
+            background-color: var(--primary-blue);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 20px;
-            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.4);
+            margin-top: 25px;
+            box-shadow: 0 4px 20px rgba(0, 74, 173, 0.4);
+            transition: 0.3s;
         }
 
-        .services { padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        
-        .card {
+        .services-section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .services-section h2 { color: var(--primary-blue); margin-bottom: 40px; font-size: 2rem; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
             border-radius: 15px;
             overflow: hidden;
-            background: var(--white);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-bottom: 4px solid var(--blue);
+            border-bottom: 5px solid var(--primary-blue);
         }
 
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card h3 { padding: 15px; color: var(--blue); text-align: center; }
-        .card p { padding: 0 15px 20px; text-align: center; color: #444; font-size: 0.9rem; }
+        .service-card img { width: 100%; height: 210px; object-fit: cover; }
+        .service-card h3 { padding: 20px 10px 10px; color: var(--primary-blue); }
+        .service-card p { padding: 0 15px 25px; color: #555; font-size: 0.95rem; }
 
-        footer { background: var(--black); color: white; text-align: center; padding: 30px; margin-top: 30px; }
-        .credits { font-size: 0.7rem; margin-top: 10px; opacity: 0.5; }
+        footer { background: var(--deep-black); color: white; text-align: center; padding: 40px 20px; margin-top: 40px; }
+        .dev-credit { font-size: 0.75rem; margin-top: 15px; opacity: 0.5; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 style="letter-spacing: 2px;">SHERIF PRO</h1>
-    <p>بإشراف المهندس شريف سالم</p>
+    <div style="font-size: 2rem; font-weight: bold; letter-spacing: 2px;">SHERIF PRO</div>
+    <div style="font-size: 0.9rem; opacity: 0.8;">تحت إشراف المهندس شريف سالم</div>
 </header>
 
 <section class="hero">
     <h1>تجديد السيارات برؤية هندسية</h1>
-    <p>الريادة في صيانة الهياكل، السمكرة الحديثة، والدهان الحراري</p>
-    <a href="https://wa.me/201222880016" class="cta-btn">تواصل عبر واتساب الآن</a>
+    <p>التميز في صيانة الهياكل، السمكرة الحديثة، والدهان الحراري</p>
+    <a href="https://wa.me/201222880016" class="whatsapp-btn">تواصل مع م. شريف الآن</a>
 </section>
 
-<section class="services">
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?w=500&q=80" alt="سمكرة">
-        <h3>السمكرة والدهان</h3>
-        <p>إعادة السيارة لحالة الفابريكا بأجود أنواع الطلاء والفرن الحراري.</p>
-    </div>
+<section class="services-section">
+    <h2>خدماتنا الفنية المتطورة</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?w=500&q=80" alt="سمكرة ودهان">
+            <h3>السمكرة والدهان</h3>
+            <p>إعادة السيارة لحالة الفابريكا بأجود أنواع الطلاء والفرن الحراري لضمان اللمعان الدائم.</p>
+        </div>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1632733711679-5292d6863f14?w=500&q=80" alt="شاسيه">
-        <h3>هندسة الهياكل</h3>
-        <p>ضبط زوايا وإصلاح الشاسيه المتضرر بأجهزة قياس دقيقة جداً.</p>
-    </div>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1632733711679-5292d6863f14?w=500&q=80" alt="تعديل شاسيه">
+            <h3>هندسة الهياكل</h3>
+            <p>ضبط زوايا وإصلاح الشاسيه المتضرر بأحدث أجهزة القياس لضمان توازن وأمان السيارة.</p>
+        </div>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=500&q=80" alt="ميكانيكا">
-        <h3>الميكانيكا والكهرباء</h3>
-        <p>فحص كمبيوتر وصيانة شاملة للمحركات والأنظمة الكهربائية.</p>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=500&q=80" alt="ميكانيكا سيارات">
+            <h3>الميكانيكا والكهرباء</h3>
+            <p>فحص شامل واكتشاف الأعطال بالكمبيوتر مع إصلاح دقيق لكافة الأنظمة الميكانيكية.</p>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 جميع الحقوق محفوظة لـ Sherif Pro</p>
-    <div class="credits">تم التطوير بواسطة Ashraf Tech</div>
+    <p>© 2026 جميع الحقوق محفوظة - Sherif Pro</p>
+    <p style="color: var(--primary-blue); font-weight: bold; margin-top: 5px;">الإسكندرية، مصر</p>
+    <div class="dev-credit">تم التطوير بواسطة Ashraf Tech</div>
 </footer>
 
 </body>
