@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sherif Pro v2 | شريف برو - صيانة سيارات</title>
+    <title>Sherif Pro | شريف برو - هندسة السيارات</title>
     <style>
         :root {
             --blue: #004aad;
             --black: #0d0d0d;
             --white: #ffffff;
-            --gray: #f1f1f1;
+            --gray: #f4f4f4;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-        
-        body { background-color: var(--white); color: var(--black); }
+        body { background-color: var(--white); color: var(--black); line-height: 1.6; }
 
-        /* الهيدر الجديد */
         header {
             background-color: var(--black);
             color: var(--white);
@@ -25,10 +23,9 @@
             border-bottom: 5px solid var(--blue);
         }
 
-        /* القسم الرئيسي بالصور الحديثة */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1492144534655-ad79c964c9ad?w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -36,48 +33,48 @@
             text-align: center;
         }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
-
-        /* أزرار التواصل المباشر */
+        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        
         .cta-btn {
             display: inline-block;
             background-color: var(--blue);
             color: white;
             padding: 15px 30px;
-            border-radius: 10px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.4);
         }
 
-        /* شبكة الخدمات الفنية */
-        .services { padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .services { padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         
         .card {
-            border: 1px solid #ddd;
             border-radius: 15px;
             overflow: hidden;
             background: var(--white);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--blue);
         }
 
-        .card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 4px solid var(--blue); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
         .card h3 { padding: 15px; color: var(--blue); text-align: center; }
-        .card p { padding: 0 15px 20px; text-align: center; color: #444; }
+        .card p { padding: 0 15px 20px; text-align: center; color: #444; font-size: 0.9rem; }
 
-        footer { background: var(--black); color: white; text-align: center; padding: 25px; margin-top: 30px; }
+        footer { background: var(--black); color: white; text-align: center; padding: 30px; margin-top: 30px; }
+        .credits { font-size: 0.7rem; margin-top: 10px; opacity: 0.5; }
     </style>
 </head>
 <body>
 
 <header>
     <h1 style="letter-spacing: 2px;">SHERIF PRO</h1>
-    <p>هندسة صيانة السيارات - م. شريف سالم</p>
+    <p>بإشراف المهندس شريف سالم</p>
 </header>
 
 <section class="hero">
     <h1>تجديد السيارات برؤية هندسية</h1>
-    <p>سمكرة، دهان، وميكانيكا بأحدث التقنيات العالمية</p>
+    <p>الريادة في صيانة الهياكل، السمكرة الحديثة، والدهان الحراري</p>
     <a href="https://wa.me/201222880016" class="cta-btn">تواصل عبر واتساب الآن</a>
 </section>
 
@@ -102,8 +99,8 @@
 </section>
 
 <footer>
-    <p>© 2026 Sherif Pro | جميع الحقوق محفوظة</p>
-    <p style="font-size: 0.8rem; margin-top: 5px; opacity: 0.5;">تطوير: Ashraf Tech</p>
+    <p>© 2026 جميع الحقوق محفوظة لـ Sherif Pro</p>
+    <div class="credits">تم التطوير بواسطة Ashraf Tech</div>
 </footer>
 
 </body>
