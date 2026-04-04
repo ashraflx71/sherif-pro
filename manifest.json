@@ -4,6 +4,7 @@
   "description": "خبير سمكرة ودهان السيارات بنظام Back To Zero في الإسكندرية. دقة هندسية وأمانة.",
   "start_url": "https://www.sherifpro.com/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#000000",
   "theme_color": "#D4AF37",
   "lang": "ar-EG",
