@@ -2,509 +2,79 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>السمكرة والدهان الحراري | مركز باك تو زيرو الاحترافي</title>
-    <!-- Font Awesome 6 (مجاني) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>مركز شريف سالم لسمكرة ودهان السيارات | Back To Zero الإسكندرية</title>
+    <meta name="description" content="مركز شريف سالم المتخصص في سمكرة ودهان السيارات بنظام فابريكا Back To Zero. أفضل ورشة إصلاح حوادث في الإسكندرية بمواصفات عالمية.">
+    <meta name="keywords" content="شريف سالم, سمكرة سيارات الإسكندرية, دهان سيارات, Back To Zero, إصلاح حوادث, محرم بك, صيانة سيارات">
+    
+    <link rel="canonical" href="https://sherifpro.com/">
+    <meta property="og:title" content="شريف سالم لسمكرة ودهان السيارات">
+    <meta property="og:description" content="إصلاح صدمات ودهان السيارات بأعلى جودة في الإسكندرية - مركز شريف سالم.">
+    <meta property="og:image" content="link-to-your-logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoBodyShop",
+      "name": "مركز شريف سالم لسمكرة السيارات",
+      "image": "https://sherifpro.com/logo.png",
+      "@id": "",
+      "url": "https://sherifpro.com",
+      "telephone": "+201227302325",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "الصبحية، محرم بك، مدينة الحرفيين",
+        "addressLocality": "Alexandria",
+        "addressCountry": "EG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.182, 
+        "longitude": 29.945
+      }
+    }
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* ستايل بسيط وسريع (Green Code) باللون الأسود والذهبي المفضل لديك */
+        body { font-family: sans-serif; background-color: #000; color: #fff; margin: 0; padding: 0; text-align: center; }
+        header { padding: 50px 20px; border-bottom: 2px solid #D4AF37; }
+        h1 { color: #D4AF37; font-size: 2.5rem; margin-bottom: 10px; }
+        p { font-size: 1.2rem; color: #ccc; }
+        .cta-button { 
+            display: inline-block; padding: 15px 30px; background-color: #D4AF37; 
+            color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 20px;
         }
-
-        body {
-            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9fafc;
-            color: #1e2a3e;
-            line-height: 1.6;
-        }
-
-        /* استيراد خط Tajawal من Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
-
-        /* تنسيق عام */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* شريط التنقل */
-        nav {
-            background: #0b2b26;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo a {
-            color: #f4c542;
-            font-size: 1.8rem;
-            font-weight: 800;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-        .logo span {
-            color: #fff;
-            font-weight: 500;
-        }
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: #f0f0f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-            font-size: 1.05rem;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            color: #f4c542;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* الأزرار */
-        .btn {
-            display: inline-block;
-            background: #f4c542;
-            color: #0b2b26;
-            padding: 0.7rem 1.8rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #f4c542;
-            color: #f4c542;
-        }
-        .btn-outline:hover {
-            background: #f4c542;
-            color: #0b2b26;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-        }
-
-        /* الأقسام العامة */
-        section {
-            padding: 5rem 0;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: #0b2b26;
-        }
-        .section-sub {
-            text-align: center;
-            color: #5a6e7c;
-            margin-bottom: 3rem;
-            font-size: 1.2rem;
-        }
-        .bg-light {
-            background-color: #ffffff;
-        }
-        .bg-offwhite {
-            background-color: #f4f6fa;
-        }
-
-        /* بطاقات الخدمات */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .service-card {
-            background: white;
-            border-radius: 24px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
-            transition: 0.25s;
-            border: 1px solid #eef2f6;
-        }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
-        }
-        .service-card i {
-            font-size: 3rem;
-            color: #f4c542;
-            margin-bottom: 1rem;
-        }
-        .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-        /* معرض الأعمال */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .gallery-item {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            background: #fff;
-            transition: 0.3s;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            transition: 0.4s;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.03);
-        }
-        .gallery-caption {
-            padding: 1rem;
-            text-align: center;
-            font-weight: 500;
-        }
-        /* نموذج الاتصال */
-        .contact-form {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 0.9rem 1.2rem;
-            border: 1px solid #dce5ec;
-            border-radius: 60px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-        textarea {
-            border-radius: 24px;
-            resize: vertical;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #f4c542;
-            box-shadow: 0 0 0 3px rgba(244,197,66,0.2);
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 2.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .contact-info div i {
-            font-size: 1.4rem;
-            color: #f4c542;
-            margin-left: 0.5rem;
-        }
-        footer {
-            background: #0b2b26;
-            color: #cddfda;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                margin-top: 1rem;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            .section-title {
-                font-size: 1.9rem;
-            }
-        }
-        .hero {
-            background: linear-gradient(135deg, #0e3b34 0%, #071f1b 100%);
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            left: 25px;
-            background: #25d366;
-            color: white;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 55px;
-            font-size: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 99;
-            transition: 0.2s;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.08);
-            background: #20b859;
-        }
+        section { padding: 40px 20px; }
+        footer { padding: 20px; font-size: 0.9rem; color: #777; }
     </style>
 </head>
 <body>
-    <!-- أيقونة واتساب عائمة -->
-    <a href="https://wa.me/966500000000?text=أهلاً،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20السمكرة%20والدهان%20الحراري" class="whatsapp-float" target="_blank" rel="noopener">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
-    <nav>
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#">Back To <span>Zero</span></a>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home" class="active">الرئيسية</a></li>
-                <li><a href="#repair">إصلاح الهياكل</a></li>
-                <li><a href="#painting">السمكرة والدهان</a></li>
-                <li><a href="#inspection">الفحص الإلكتروني</a></li>
-                <li><a href="#gallery">معرض الأعمال</a></li>
-                <li><a href="#contact">تواصل</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <h1>مركز شريف سالم</h1>
+        <p>خبراء سمكرة ودهان السيارات بنظام <strong>Back To Zero</strong></p>
+        <a href="https://wa.me/201227302325" class="cta-button">تواصل معنا الآن</a>
+    </header>
 
-    <!-- الرئيسية (hero) -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>خبرة في السمكرة والدهان الحراري</h1>
-            <p>نعيد سيارتك إلى حالة الصفر باستخدام أحدث التقنيات وأفضل المواد العالمية</p>
-            <a href="#contact" class="btn">احجز موعدك الآن <i class="fas fa-arrow-left"></i></a>
-        </div>
+    <section id="about">
+        <h2>لماذا تختار مركز شريف سالم؟</h2>
+        <p>نحن نقدم أعلى مستويات الجودة في الإسكندرية لإعادة سيارتك لحالة الفابريكا باستخدام أحدث التقنيات.</p>
     </section>
 
-    <!-- إصلاح الهياكل -->
-    <section id="repair" class="bg-light">
-        <div class="container">
-            <h2 class="section-title">إصلاح الهياكل</h2>
-            <p class="section-sub">نستخدم ميزان الأبعاد الإلكتروني وتقنيات السحب الهيدروليكي لاستقامة هيكل السيارة بدقة المصنع</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-car-crash"></i>
-                    <h3>إصلاح الصدمات</h3>
-                    <p>معالجة التشوهات والصدمات القوية دون التأثير على صلابة الهيكل.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>ميزان الأبعاد</h3>
-                    <p>فحص إلكتروني دقيق لضبط الأبعاد الأصلية للهيكل وفق كتالوج المصنع.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>سحب هيدروليكي</h3>
-                    <p>أجهزة سحب حديثة تعيد تشكيل الهيكل بأمان واحترافية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- السمكرة والدهان الحراري -->
-    <section id="painting" class="bg-offwhite">
-        <div class="container">
-            <h2 class="section-title">السمكرة والدهان الحراري</h2>
-            <p class="section-sub">دهان متعدد الطبقات بمعايير عالمية، مقاوم للحرارة والتأثيرات الجوية</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-paint-roller"></i>
-                    <h3>دهان حراري احترافي</h3>
-                    <p>تقنيات الدهان الحراري (Ceramic & Heat-resistant) لحماية الدهان من أشعة الشمس والحرارة المرتفعة.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>تجهيز السطح</h3>
-                    <p>إزالة الدهان القديم، المعجون الألماني، الصنفرة الإلكترونية للحصول على سطح أملس.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-spray-can-sparkles"></i>
-                    <h3>طبقات عالية الجودة</h3>
-                    <p>بوية أصلية مع طبقة أساس، طبقة لون، وطبقة كلير كوت مقاومة للخدوش.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- الفحص الإلكتروني -->
-    <section id="inspection" class="bg-light">
-        <div class="container">
-            <h2 class="section-title">الفحص الإلكتروني</h2>
-            <p class="section-sub">تشخيص دقيق باستخدام أحدث الأجهزة</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-chart-simple"></i>
-                    <h3>قياس سمك الدهان</h3>
-                    <p>جهاز إلكتروني لقياس سمك طبقات الدهان ومعرفة إذا كانت السيارة تعرضت لدهانات سابقة.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-microchip"></i>
-                    <h3>فحص الشاصيه</h3>
-                    <p>قراءة إلكترونية لتوافق الهيكل والكشف عن أي اعوجاج أو لحامات غير أصلية.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-file-alt"></i>
-                    <h3>تقرير كامل</h3>
-                    <p>نقدم تقريرًا شاملًا عن حالة السيارة قبل وبعد الإصلاح مع الصور.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- معرض الأعمال (صور توضيحية) -->
-    <section id="gallery" class="bg-offwhite">
-        <div class="container">
-            <h2 class="section-title">معرض الأعمال</h2>
-            <p class="section-sub">نماذج من أعمالنا في السمكرة والدهان الحراري</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://placehold.co/600x400/2c5f4e/white?text=قبل+السمكرة" alt="قبل الإصلاح">
-                    <div class="gallery-caption">إصلاح هيكل متقدم</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://placehold.co/600x400/f4c542/1e2a3e?text=بعد+الدهان+الحراري" alt="بعد الدهان الحراري">
-                    <div class="gallery-caption">دهان حراري بلمسة احترافية</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://placehold.co/600x400/0b2b26/white?text=فحص+إلكتروني" alt="فحص إلكتروني">
-                    <div class="gallery-caption">استخدام ميزان الأبعاد الإلكتروني</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- صفحة التواصل -->
-    <section id="contact" class="bg-light">
-        <div class="container">
-            <h2 class="section-title">تواصل معنا</h2>
-            <p class="section-sub">يسعدنا خدمتكم والرد على استفساراتكم في أقرب وقت</p>
-            <div class="contact-form">
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <input type="text" placeholder="الاسم الكامل" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="رقم الجوال" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="البريد الإلكتروني">
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="4" placeholder="نوع السيارة والخدمة المطلوبة..."></textarea>
-                    </div>
-                    <div style="text-align: center;">
-                        <button type="submit" class="btn">إرسال الطلب <i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </form>
-                <div class="contact-info">
-                    <div><i class="fas fa-phone-alt"></i> +966 5X XXX XXXX</div>
-                    <div><i class="fab fa-whatsapp"></i> واتساب: 05XXXXXXXX</div>
-                    <div><i class="fas fa-map-marker-alt"></i> الرياض - طريق الأمير محمد بن سلمان</div>
-                </div>
-            </div>
-        </div>
+    <section id="services">
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ سمكرة على البارد</li>
+            <li>✅ دهان أفران احترافي</li>
+            <li>✅ إصلاح حوادث كامل</li>
+            <li>✅ تلميع ونانو سيراميك</li>
+        </ul>
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2026 مركز Back To Zero للسمكرة والدهان الحراري. جميع الحقوق محفوظة.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem;">إصلاح الهياكل – دهان حراري – فحص إلكتروني – ضمان شامل على الأعمال</p>
-        </div>
+        &copy; 2026 مركز شريف سالم - جميع الحقوق محفوظة | تطوير أشرف حسن
     </footer>
 
-    <script>
-        // فتح وإغلاق القائمة في الجوال
-        const mobileBtn = document.getElementById('mobile-menu');
-        const navList = document.getElementById('nav-links');
-        mobileBtn.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
-
-        // إغلاق القائمة عند النقر على أي رابط (لتحسين التجربة)
-        const links = document.querySelectorAll('.nav-links a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navList.classList.remove('active');
-            });
-        });
-
-        // تفعيل التمرير الناعم وتمييز الرابط النشط
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-            links.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        // معالجة بسيطة لنموذج الاتصال (للتجربة، لن يتم إرسال فعلياً)
-        const contactForm = document.querySelector('.contact-form form');
-        if(contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('شكراً لتواصلكم، سنقوم بالرد خلال 24 ساعة (هذه نسخة تجريبية)');
-                contactForm.reset();
-            });
-        }
-    </script>
 </body>
-                </html>
+</html>
