@@ -1,79 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شريف برو | سمكرة ودهان السيارات Back To Zero بالإسكندرية</title>
-    
-    <meta name="description" content="مركز شريف سالم المتخصص في سمكرة ودهان السيارات بنظام فابريكا Back To Zero. دقة هندسية وأمانة في الإسكندرية.">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#D4AF37">
-    
+    <title>Creative 2026 AI | منصة شريف سالم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #D4AF37; --black: #0a0a0a; --white: #ffffff; }
-        body { background-color: var(--black); color: var(--white); font-family: sans-serif; margin: 0; padding: 0; text-align: center; }
-        header { padding: 40px 20px; border-bottom: 2px solid var(--gold); }
-        .logo-text { font-size: 2.5rem; color: var(--gold); font-weight: bold; margin: 0; }
-        .hero { padding: 50px 20px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/hero-bg.webp'); background-size: cover; }
-        .tagline { color: var(--gold); font-size: 1.2rem; letter-spacing: 2px; }
-        .cta-container { display: flex; flex-direction: column; gap: 15px; padding: 30px; align-items: center; }
-        .btn { width: 80%; max-width: 300px; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-call { background-color: var(--gold); color: var(--black); }
-        .btn-wa { border: 2px solid var(--gold); color: var(--gold); }
-        .footer { padding: 20px; font-size: 0.8rem; color: #666; }
+        :root { --blue: #0000ff; --black: #000000; }
+        body { background: var(--black); color: #fff; font-family: 'Tajawal', sans-serif; text-align: center; padding: 20px; font-size: 22px; margin: 0; }
+        .card { border: 2px solid var(--blue); border-radius: 15px; padding: 25px; background: #121212; max-width: 650px; margin: 20px auto; box-shadow: 0 0 25px rgba(0,0,255,0.4); }
+        .status { background: #000; color: #00ff00; padding: 12px; border-radius: 8px; margin: 15px 0; font-family: monospace; font-size: 18px; border: 1px solid #333; }
+        select { width: 100%; padding: 15px; border-radius: 10px; background: #000; color: #fff; border: 1px solid var(--blue); font-size: 20px; margin-bottom: 20px; font-family: 'Tajawal'; }
+        .post-card { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; margin-bottom: 25px; overflow: hidden; text-align: right; }
+        .post-title { color: #fff; text-decoration: none; font-size: 20px; display: block; padding: 15px; font-weight: bold; }
+        .btn-action { background: var(--blue); color: #fff; border: none; padding: 15px; border-radius: 10px; font-size: 20px; cursor: pointer; width: 100%; transition: 0.3s; }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoBodyShop",
-      "name": "مركز شريف سالم - Sherif Pro",
-      "image": "https://www.sherifpro.com/icon-512.png",
-      "url": "https://www.sherifpro.com",
-      "telephone": "+201227302325",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "الصبحية، محرم بك، مدينة الحرفيين",
-        "addressLocality": "Alexandria",
-        "addressCountry": "EG"
-      }
-    }
-    </script>
 </head>
 <body>
 
-    <header>
-        <h1 class="logo-text">SHERIF PRO</h1>
-        <p class="tagline">BACK TO ZERO - دقة هندسية</p>
-    </header>
+<div class="card">
+    <h1 style="color: var(--blue); margin: 0;">Creative 2026 AI</h1>
+    <p style="font-size: 16px; color: #888; margin-bottom: 20px;">دعم المحتوى التقني للخبير: شريف سالم</p>
+    
+    <select id="blogSelect">
+        <option value="www.sherifpro.com">⭐ مدونة شريف سالم (تجديد السيارات)</option>
+        <option value="ashraf-creative.blogspot.com">Creative 2026 (الرئيسية)</option>
+        <option value="optimum2026.blogspot.com">Optimum 2026</option>
+        <option value="ashrafhassan2026.blogspot.com">أشرف حسن 2026</option>
+    </select>
 
-    <main class="hero">
-        <h2>أفضل مركز سمكرة ودهان سيارات في الإسكندرية</h2>
-        <p>نرجع عربيتك لحالة الفابريكا بأحدث التقنيات العالمية.</p>
+    <div class="status" id="display">> جاهز لدعم "شريف سالم" في محركات البحث...</div>
+    <button class="btn-action" onclick="loadBlogData()">عرض مقالات شريف سالم</button>
+
+    <div id="feed" style="margin-top:30px;"></div>
+</div>
+
+<script>
+function loadBlogData() {
+    const blogUrl = document.getElementById('blogSelect').value;
+    const script = document.createElement('script');
+    script.src = `https://${blogUrl}/feeds/posts/default?alt=json-in-script&callback=renderPosts&max-results=6`;
+    document.body.appendChild(script);
+}
+
+function renderPosts(data) {
+    const feed = document.getElementById('feed');
+    feed.innerHTML = "";
+    data.feed.entry.forEach(entry => {
+        const title = entry.title.$t;
+        const link = entry.link.find(l => l.rel === 'alternate').href;
         
-        <div class="cta-container">
-            <a href="tel:+201227302325" class="btn btn-call">إتصل الآن</a>
-            <a href="https://wa.me/201227302325" class="btn btn-wa">راسلنا واتساب</a>
-        </div>
-    </main>
+        const card = document.createElement('div');
+        card.className = "post-card";
+        card.innerHTML = `
+            <div class="post-content">
+                <span class="post-title">⚡ ${title}</span>
+                <p style="font-size:14px; color:var(--blue); padding:0 15px;">بواسطة: شريف سالم</p>
+                <button class="btn-action" style="background:#000; border:1px solid var(--blue); margin-bottom:10px;" onclick="window.open('${link}')">معاينة المقال ودعم الـ SEO</button>
+            </div>
+        `;
+        feed.appendChild(card);
+    });
+}
+</script>
 
-    <section style="padding: 40px 20px; background: #111;">
-        <h3 style="color: var(--gold);">لماذا شريف برو؟</h3>
-        <ul style="list-style: none; padding: 0; line-height: 2;">
-            <li>✅ نظام Back To Zero للأصالة.</li>
-            <li>✅ دقة متناهية في مطابقة الألوان.</li>
-            <li>✅ سرعة في التسليم وأمانة في العمل.</li>
-        </ul>
-    </section>
-
-    <footer class="footer">
-        <p>© 2026 Sherif Pro. Developed by Ashraf Hassan</p>
-    </footer>
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }
-    </script>
 </body>
 </html>
